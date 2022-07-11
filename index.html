@@ -1,120 +1,92 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-tw">
-	<head>
-		<!-- Required meta tags -->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="icon" type="image/x-icon" href="favicon.ico">
-		<!-- Bootstrap CSS -->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-
-		<title>BUD_More</title>
-	</head>
-	<div>
-		<!-- nav BG -->
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-			<div class="container-fluid">
-				<a class="navbar-brand" href="#">BUD</a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="https://bud2021.github.io/webtest/">首頁</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="test_bud.html">福麥</a>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-								測試中
-							</a>
-							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<li><a class="dropdown-item" href="test_index.html" >BUD Safety</a></li>
-								<li><a class="dropdown-item" href="test2_index.html">BUD 唬爛產生器</a></li>
-                                
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>BUD</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- SimpleLightbox plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- 導覽列 -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">BUD</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="test_bud.html">[測試1]福麥</a></li>
+                        <li class="nav-item"><a class="nav-link" href="test2_index.html">[唬爛產生器]</a></li>
+                        <li class="nav-item"><a class="nav-link" href="test_index.html">掃毒</a></li>
+                        <li class="nav-item"><a class="nav-link" href="r18/">r18</a></li>
+						<div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+							<ul class="navbar-nav">
+								<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									更多
+								</a>
+								<ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+									<li><a class="dropdown-item" href="mf/">交友網站</a></li>
+									<li><a class="dropdown-item" href="pm/">贊助</a></li>
+									<li><a class="dropdown-item" href="#">待補</a></li>
+								</ul>
+							</li>
 							</ul>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Made by ღ with Oio</a>
-						</li>
-					</ul>
-					<form class="d-flex" action="http://www.google.com/search" method="get">
-						<input class="form-control me-2" name="q" type="search"  placeholder="Google Search" aria-label="Search">
-						<button class="btn btn-outline-success" type="submit">Search</button>
-					</form>
-				</div>
+						</div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- 標題 -->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 h-100">
+                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-8 align-self-end">
+                        <h1 class="text-white font-weight-bold">BUD</h1>
+                        <hr class="divider" />
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <p class="text-white-75 mb-5">存放沒有用的網站的地方</p>
+                        <!-- <a class="btn btn-primary btn-xl" href="#about">查看更多</a> -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Footer-->
+        <footer class="bg-light py-3">
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2021 - 2022 BUD</div></div>
+			<div id="current_date"><p></p>
+				<script>
+				date = new Date();
+				year = date.getFullYear();
+				month = date.getMonth() + 1;
+				day = date.getDate();
+				document.getElementById("current_date").innerHTML ="更新日期:" + year + "-" + month + "-" + day;
+				</script>
 			</div>
-		</nav>
-		<!-- nav END -->
-		<div style="padding:33px;opacity:0;">
-			<!-- empty block -->
-			</div>
-			<div class="container">
-				<div class="row"><!-- weatherwidget -->
-					<a class="weatherwidget-io" href="https://forecast7.com/zh-tw/23d71120d43/yunlin-county/" data-label_1="雲林" data-label_2="天氣預報" data-font="微軟正黑體 (Microsoft JhengHei)" data-theme="weather_one" >雲林 天氣預報</a>
-					<script>
-					!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-					</script>
-				</div>
-			</div>
-				<div style="padding:5px;opacity:0;">
-				<!-- empty block -->
-				</div>
-			<div class="container">
-				<div class="row">
-					<!-- TradingView Widget BEGIN -->
-					<div class="tradingview-widget-container">
-					  <div class="tradingview-widget-container__widget"></div>
-					  <div class="tradingview-widget-copyright"><a href="https://tw.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">information</span></a> from TradingView</div>
-					  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
-					  {
-					  "symbols": [
-						{
-						  "proName": "BITSTAMP:BTCUSD",
-						  "title": "比特幣"
-						},
-						{
-						  "proName": "BITSTAMP:ETHUSD",
-						  "title": "以太坊"
-						},
-						{
-						  "description": "LTC",
-						  "proName": "BINANCE:LTCPERP"
-						},
-						{
-						  "description": "三星",
-						  "proName": "KRX:005930"
-						},
-						{
-						  "description": "Apple",
-						  "proName": "NASDAQ:AAPL"
-						}
-					  ],
-					  "colorTheme": "dark",
-					  "isTransparent": false, 
-					  "showSymbolLogo": true,
-					  "locale": "zh_TW"
-					}
-					  </script>
-					</div>
-					<!-- TradingView Widget END -->
-				</div>
-			</div>	
-			<div style="padding:3px;opacity:0;">
-			<!-- empty block -->
-			</div>
-		</div>
-        <!-- Optional JavaScript; choose one of the two! -->
-
-		<!-- Option 1: Bootstrap Bundle with Popper -->
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-
-		<!-- Option 2: Separate Popper and Bootstrap JS -->
-		<!--
-		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
-		-->
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- SimpleLightbox plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>
