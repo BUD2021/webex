@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-tw">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Bootstrap CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+		<title>唬爛產生器</title>
+	</head>
+	<body style="background: linear-gradient(to bottom, rgba(192, 192, 192, 0.8) 0%, rgba(192, 192, 192, 0.8) 100%),url(https://iw233.cn/api.php?sort=pc);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position:center center;opacity: 0.95;">
+		<!-- 導覽列開端 -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">唬爛產生器</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="index.html">首頁</a>
+						</li>
+            <li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="https://howtobullshit.me/">原作者</a>
+						</li>
+				</div>
+			</div>
+		</nav>
+	<!-- 導覽列尾端 -->
+	<div style="padding:33px;opacity:0;">
+
+		</div>
+
+    
+		<div class="container-md">
+  <div class="row align-items-center">
+    <div class="col" style="align-items-center">
+        <h3>
+          <p class="text-center">繳交報告、湊字數、應付男/女朋友的好夥伴</p>
+        </h3>
+        <blockquote>
+          <div>
+            <div class="input-field" style="margin-top: 15px;">
+              <input class="form-control me-2" id="topic" type="text" placeholder="請輸入您的主題名稱">
+              <label for="topic"><mark>＊請輸入您的主題名稱</mark></label>
+            </div>
+            <div class="input-field" style="margin-top: 15px;">
+              <input class="form-control me-2" id="minlen" type="number" placeholder="請輸入字數要求(上限1000)">
+              <label for="minlen"><mark>＊請輸入字數要求(上限1000)</mark></label>
+            </div>
+            <button type="button" class="btn btn-danger">
+            <a style="text-decoration:none;color:White;" loading-text="產生中..."  id="btn-get-bullshit">產生</a>
+          </button>
+          </div>
+          
+        </blockquote>
+        <div style="margin: 50px; font-weight: 600;">
+          <p id="content"></p>
+        </div>
+        
+    </div>
+	
+	
+    
+	</div>
+  <!-- test -->
+  <script type="text/javascript" src="js/materialize.min.js"></script> 
+  <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+  <script>
+    bullshit = {
+      init: function() {
+        document.getElementById("btn-get-bullshit")
+          .addEventListener("click", this.handleGetBullshit);
+      },
+
+      openButtonLoading: function(elem) {
+        elem.classList.add("disabled");
+        elem.setAttribute("origin-text", elem.innerText);
+        elem.innerText = elem.getAttribute("loading-text");
+      },
+
+      closeButtonLoading: function(elem) {
+        elem.classList.remove("disabled");
+        elem.setAttribute("loadign-text", elem.innerText);
+        elem.innerText = elem.getAttribute("origin-text");
+      },
+
+      handleGetBullshit: function(e) {
+        const topic = document.getElementById("topic").value;
+        const minLen = +document.getElementById("minlen").value;
+        if (topic === "" || minLen === 0) return;
+        bullshit.openButtonLoading(e.target);
+
+        setTimeout(() => {
+          $.ajax({
+            url: "https://api.howtobullshit.me/bullshit",
+            type: "post",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify({ Topic: topic, MinLen: minLen }),
+            dataType: "text",
+            success: function(r) {
+              $("#content").html(r)
+              bullshit.closeButtonLoading(e.target)
+            }
+          })
+        }, 1500);
+      }
+    }
+
+    bullshit.init()
+  </script>
+  <!-- end -->
+		<!-- Optional JavaScript; choose one of the two! -->
+
+		<!-- Option 1: Bootstrap Bundle with Popper -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+		<!-- Option 2: Separate Popper and Bootstrap JS -->
+		<!--
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+		-->
+	</body>
+</html>
