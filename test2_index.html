@@ -8,52 +8,63 @@
 		<!-- Bootstrap CSS -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
-		<title>test</title>
+		<title>唬爛產生器</title>
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-            <div class="container px-4 px-lg-2">
-                <a class="navbar-brand" href="#page-top">BUD唬爛產生器</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.html">BUD_More</a>
-                </li>
-            </div>
-        </nav>
+		<!-- 導覽列開端 -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">唬爛產生器</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="index.html">首頁</a>
+						</li>
+            <li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="https://howtobullshit.me/">原作者</a>
+						</li>
+				</div>
+			</div>
+		</nav>
+	<!-- 導覽列尾端 -->
 	<div style="padding:33px;opacity:0;">
 
 		</div>
+
+    
 		<div class="container-md">
-        <div class="row align-items-center">
-    <div class="col" style="text-align:center;opacity:0;">
-      鍵入連結--->
-    </div>
-	<div class="col" style="align-items-center">
-        <blockquote>
-          <p>繳交報告、湊字數、應付男/女朋友的好夥伴</p>
-        </blockquote>
+  <div class="row align-items-center">
+    <div class="col" style="align-items-center">
+        <h3>
+          <p class="text-center">繳交報告、湊字數、應付男/女朋友的好夥伴</p>
+        </h3>
         <blockquote>
           <div>
             <div class="input-field" style="margin-top: 15px;">
-              <input class="form-control me-2" id="topic" type="text" placeholder="＊請輸入您的主題名稱">
-              <label for="topic">＊請輸入您的主題名稱</label>
+              <input class="form-control me-2" id="topic" type="text" placeholder="請輸入您的主題名稱">
+              <label for="topic"><mark>＊請輸入您的主題名稱</mark></label>
             </div>
             <div class="input-field" style="margin-top: 15px;">
-              <input class="form-control me-2" id="minlen" type="number" placeholder="＊請輸入您的主題名稱">
-              <label for="minlen">＊請輸入字數要求(上限1000)</label>
+              <input class="form-control me-2" id="minlen" type="number" placeholder="請輸入字數要求(上限1000)">
+              <label for="minlen"><mark>＊請輸入字數要求(上限1000)</mark></label>
             </div>
-            <a class="waves-effect waves-light red darken-4 btn-small pulse" loading-text="產生中..."  id="btn-get-bullshit">產生</a>
+            <button type="button" class="btn btn-danger">
+            <a style="text-decoration:none;color:White;" loading-text="產生中..."  id="btn-get-bullshit">產生</a>
+          </button>
           </div>
+          
         </blockquote>
         <div style="margin: 50px; font-weight: 600;">
           <p id="content"></p>
         </div>
+        
     </div>
 	
 	
-    <div class="col" style="text-align:center;opacity:0;">
-      鍵入連結--->
-    </div>
+    
 	</div>
   <!-- test -->
   <script type="text/javascript" src="js/materialize.min.js"></script> 
